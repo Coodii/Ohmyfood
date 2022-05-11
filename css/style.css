@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: Shrikhand;
+}
+
+h2, p {
+  font-family: Roboto;
+}
+
+h2 {
+  padding-left: 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.localisation {
+  background-color: lightgray;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  color: black;
+}
+.localisation .localisationLogo {
+  padding: 15px 15px 0px 0px;
+}
+
+.explorer {
+  padding: 20px 0px 20px 0px;
+  background-color: rgb(241, 238, 238);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.explorer .explorerTitle {
+  padding: 0px 30px 0px 30px;
+}
+.explorer .explorerDescription {
+  padding: 0px 5px 0px 5px;
+}
+.explorer .explorerButton {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 50px;
+  height: 50px;
+  width: 50%;
+  font-size: 14px;
+  border: 0px;
+  color: white;
+}
+
+.fonctionnement {
+  padding-top: 20px;
+}
+.fonctionnement .steps {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 0px 0px 50px 20px;
+}
+.fonctionnement .steps .stepCard {
+  display: flex;
+  background-color: rgb(241, 238, 238);
+  flex-direction: row;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 10px 0px 10px 0px;
+  position: relative;
+}
+.fonctionnement .steps .stepCard .stepCardNumberDiv {
+  height: 22px;
+  width: 22px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #9356DC;
+  color: white;
+  position: absolute;
+  left: -10px;
+  top: 35%;
+}
+.fonctionnement .steps .stepCard .stepCardNumberDiv .stepCardNumber {
+  margin: 0;
+  padding-top: 2px;
+}
+.fonctionnement .steps .stepCard .stepCardLogo {
+  padding-left: 30px;
+  padding-top: 15px;
+  color: gray;
+}
+.fonctionnement .steps .stepCard .stepCardDescription {
+  font-weight: bold;
+  padding-left: 20px;
+}
+.fonctionnement .steps .stepCard .purpleLogo {
+  color: #9356DC;
+}
+.fonctionnement .steps .purpleCard {
+  background-color: rgb(237, 219, 245);
+}
+
+.restaurants {
+  background-color: rgb(241, 238, 238);
+  width: 100%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.restaurants .card {
+  padding-left: 20px;
+  padding-right: 20px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.restaurants .card .cardRestaurant {
+  color: inherit;
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 2px 1px #ccc;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.restaurants .card .cardRestaurant .imgRestaurant {
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 70%;
+  padding: 0;
+}
+.restaurants .card .cardRestaurant .restaurantName {
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 0px 0px 10px;
+}
+.restaurants .card .cardRestaurant .restaurantPlace {
+  margin: 0;
+  padding: 10px 0px 0px 10px;
+}
+.restaurants .card .cardRestaurant .new {
+  background-color: #99E2D0;
+  border: 0;
+  border-radius: 2px;
+  color: #27a787;
+  height: 30px;
+  width: 85px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 15px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.restaurants .card .cardRestaurant .heart {
+  color: gray;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.788);
+  color: white;
+}
+footer .footerP {
+  font-family: Shrikhand;
+  padding: 20px 0px 0px 20px;
+  font-size: 25px;
+  margin: 0;
+}
+footer .footerUl {
+  margin: 0;
+  padding-top: 0;
+  list-style-type: none;
+  padding-left: 20px;
+  font-size: 15px;
+}
+footer .footerUl .footerLi {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+footer .footerUl .footerLi .footerI {
+  padding-top: 15px;
+  padding-right: 10px;
+}/*# sourceMappingURL=style.css.map */
