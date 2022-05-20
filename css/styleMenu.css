@@ -1,0 +1,76 @@
+body {
+  background-color: white;
+}
+body .imgRestaurantMenu {
+  position: relative;
+  width: 100%;
+}
+body .menu {
+  position: relative;
+  z-index: 3;
+  margin-top: -40px;
+  border-radius: 20px 20px 0px 0px;
+  background-color: rgb(241, 238, 238);
+  padding-bottom: 20px;
+}
+body .menu .menuTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body .menu .menuTitle .heart {
+  padding-top: 30px;
+  color: gray;
+}
+body .menu .mealType {
+  position: relative;
+  height: auto;
+  padding-left: 20px;
+}
+body .menu .mealType .borderLine {
+  width: 45px;
+  background-color: #99E2D0;
+  height: 2px;
+  position: absolute;
+  top: 25px;
+}
+body .menu .menuMeal {
+  padding: 0px 20px 0px 20px;
+}
+body .menu .menuMeal .mealCard {
+  margin-top: 10px;
+  border-radius: 15px;
+  position: relative;
+  background-color: white;
+}
+body .menu .menuMeal .mealCard .mealName {
+  margin: 0;
+  padding: 10px 0px 0px 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+body .menu .menuMeal .mealCard .mealDescription {
+  margin: 0;
+  padding: 10px 0px 10px 10px;
+  font-size: 13px;
+  height: 50%;
+}
+body .menu .menuMeal .mealCard .price {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+body .button {
+  margin: 40px 0px 40px 0;
+  justify-content: center;
+  display: flex;
+}
+body .button .commandButton {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 50px;
+  height: 50px;
+  width: 50%;
+  font-size: 20px;
+  border: 0px;
+  color: white;
+}/*# sourceMappingURL=styleMenu.css.map */
