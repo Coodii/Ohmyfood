@@ -172,6 +172,23 @@ header {
   position: absolute;
   bottom: 30px;
   right: 30px;
+  z-index: 5000;
+}
+.restaurants .card .cardRestaurant .heartPurple {
+  opacity: 0;
+  color: #9356DC;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 30;
+}
+.restaurants .card .cardRestaurant .heartPurple:hover {
+  -webkit-animation-name: heartOpacity;
+          animation-name: heartOpacity;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 footer {
@@ -202,4 +219,22 @@ footer .footerUl .footerLi {
 footer .footerUl .footerLi .footerI {
   padding-top: 15px;
   padding-right: 10px;
+}
+
+@-webkit-keyframes heartOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+
+@keyframes heartOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -202,9 +202,23 @@ header{
                     position: absolute;
                     bottom: 30px;
                     right: 30px;
+                    z-index: 5000;
+                
+                }.heartPurple{
+                    opacity: 0;
+                    color: #9356DC;
+                    position: absolute;
+                    bottom: 30px;
+                    right: 30px;
+                    z-index: 30;
                 }
         
-        }   
+                .heartPurple:hover{
+                    animation-name: heartOpacity;
+                    animation-duration: 0.5s;
+                    animation-fill-mode: forwards;
+                }
+        }
     }
 }
 
@@ -246,3 +260,15 @@ footer{
         }
     }
 }
+
+
+
+@keyframes heartOpacity {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
+
+
+
+
+
