@@ -87,8 +87,9 @@ body{
         
                 .price{
                     position: absolute;
-                    right: 10px;
-                    top: 20px;
+                    right: 5%;
+                    bottom: 15%;
+                    animation: priceAnimationReverted 1.5s forwards;
                 }
 
                 .animationMeal{
@@ -102,20 +103,34 @@ body{
                     align-items: center;
                     display: flex;
                     visibility: hidden;
+                    animation: removeMenu 1.5s forwards;
+
+                    .check{
+                        color: white;
+                        animation: spin 1.5 reverse ;
+                    }
                 }
             }
+                
 
             .mealCard:hover {
+                .mealName{
+                    animation: reduceSizeMeal 3s forwards;
+                }
+
+                .mealDescription{
+                    animation: reduceSizeMeal 3s forwards;
+                }
+
                 .price{
-                    animation: priceAnimation
+                    animation: priceAnimation 3s forwards;
                 }
 
                 .animationMeal{
-                    animation: addMenu 3s;
+                    animation: addMenu 3s forwards;
                     
                     .check{
-                        color: white;
-                        animation: spin 3s forwards;
+                        animation: spin 3s forwards ;
                     }
                 }
             }
@@ -139,10 +154,83 @@ body{
     }   
 }
 
+
+@media only screen and (min-width: 992px){
+    body{
+        background-color: white;
+        height: 100%;
+        position: relative;
+        
+        .image{
+            display: flex;
+            height:400px;
+
+            .imgRestaurantMenu{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        .menu{
+
+            .menuAlignement{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+
+                .entrees{
+                    width: 33%;
+                }
+
+                .plats{
+                    width: 33%;
+                }
+
+                .desserts{
+                    width: 33%;
+
+                }
+
+                .menuMeal{
+                    .mealCard{                   
+                        
+                        .mealName{
+                            font-size: 20px;
+                        }
+                            
+                        .mealDescription{
+                            font-size: 17px;
+                            
+                        }
+                
+                        .price{
+                            font-size: 20px;
+                        }
+                    }
+
+                }
+            }
+        }
+        .button{
+            padding-top: 50px;
+        }
+    }
+}
+
+
+
+
+
 @keyframes addMenu {
     from {background-color:  #99E2D0; width: 0px; visibility: hidden;}
-    to {background-color: #99E2D0; width: 20%; height: 100%; visibility: visible;}
+    to {background-color: #99E2D0; width: 15%; height: 100%; visibility: visible;}
   }
+
+  @keyframes removeMenu {
+    from {background-color: #99E2D0; width: 15%; height: 100%; visibility: visible;}
+    to {background-color:  #99E2D0; width: 0px; visibility: hidden;}
+  }
+
 
 
   @keyframes spin {
@@ -154,19 +242,34 @@ body{
     }
 }
 
+@keyframes priceAnimation{
+    from {right:5%}
+    to {right: 20%;}
+}
+
+@keyframes priceAnimationReverted{
+    from {right:20%}
+    to {right:5%}
+}
+
+@keyframes reduceSizeMeal{
+    from {width: 100%; }
+    to {width: 50%; white-space: nowrap;
+        overflow: hidden; text-overflow: ellipsis;}
+}
 
 
 
 @keyframes cascade {
-    0% {margin-top: 30px; opacity: 0;}
+    0% {padding-top: 20px; opacity: 0;}
     100% {
-        margin-top: 10px; opacity: 1;}
+        padding-top: 10px; opacity: 1;}
 }
 
 @for $i from 1 through 4 {
     .menuMeal div:nth-child(#{$i}n){
         animation: cascade 2s forwards;
-        animation-delay: #{$i * 0.5}s;
+        animation-delay: #{$i * 1}s;
     }
 }
 
