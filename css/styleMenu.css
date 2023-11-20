@@ -35,8 +35,7 @@ body .menu .menuTitle .hearts .heartPurple {
   right: 5px;
 }
 body .menu .menuTitle .hearts .heartPurple:hover {
-  -webkit-animation: heartOpacity 0.5s forwards;
-          animation: heartOpacity 0.5s forwards;
+  animation: heartOpacity 0.5s forwards;
 }
 body .menu .mealType {
   position: relative;
@@ -76,8 +75,7 @@ body .menu .menuMeal .mealCard .price {
   position: absolute;
   right: 5%;
   bottom: 15%;
-  -webkit-animation: priceAnimationReverted 1.5s forwards;
-          animation: priceAnimationReverted 1.5s forwards;
+  animation: priceAnimationReverted 1s forwards;
 }
 body .menu .menuMeal .mealCard .animationMeal {
   position: absolute;
@@ -90,32 +88,26 @@ body .menu .menuMeal .mealCard .animationMeal {
   align-items: center;
   display: flex;
   visibility: hidden;
-  -webkit-animation: removeMenu 1.5s forwards;
-          animation: removeMenu 1.5s forwards;
+  animation: removeMenu 1s forwards;
 }
 body .menu .menuMeal .mealCard .animationMeal .check {
   color: white;
-  animation: spin 1.5 reverse;
+  animation: spinReverse 1s reverse;
 }
 body .menu .menuMeal .mealCard:hover .mealName {
-  -webkit-animation: reduceSizeMeal 3s forwards;
-          animation: reduceSizeMeal 3s forwards;
+  animation: reduceSizeMeal 1s forwards;
 }
 body .menu .menuMeal .mealCard:hover .mealDescription {
-  -webkit-animation: reduceSizeMeal 3s forwards;
-          animation: reduceSizeMeal 3s forwards;
+  animation: reduceSizeMeal 1s forwards;
 }
 body .menu .menuMeal .mealCard:hover .price {
-  -webkit-animation: priceAnimation 3s forwards;
-          animation: priceAnimation 3s forwards;
+  animation: priceAnimation 1s forwards;
 }
 body .menu .menuMeal .mealCard:hover .animationMeal {
-  -webkit-animation: addMenu 3s forwards;
-          animation: addMenu 3s forwards;
+  animation: addMenu 1s forwards;
 }
 body .menu .menuMeal .mealCard:hover .animationMeal .check {
-  -webkit-animation: spin 3s forwards;
-          animation: spin 3s forwards;
+  animation: spin 1s forwards;
 }
 body .button {
   margin: 40px 0px 40px 0;
@@ -174,19 +166,6 @@ body .button .commandButton {
     padding-top: 50px;
   }
 }
-@-webkit-keyframes addMenu {
-  from {
-    background-color: #99E2D0;
-    width: 0px;
-    visibility: hidden;
-  }
-  to {
-    background-color: #99E2D0;
-    width: 15%;
-    height: 100%;
-    visibility: visible;
-  }
-}
 @keyframes addMenu {
   from {
     background-color: #99E2D0;
@@ -198,19 +177,6 @@ body .button .commandButton {
     width: 15%;
     height: 100%;
     visibility: visible;
-  }
-}
-@-webkit-keyframes removeMenu {
-  from {
-    background-color: #99E2D0;
-    width: 15%;
-    height: 100%;
-    visibility: visible;
-  }
-  to {
-    background-color: #99E2D0;
-    width: 0px;
-    visibility: hidden;
   }
 }
 @keyframes removeMenu {
@@ -226,14 +192,6 @@ body .button .commandButton {
     visibility: hidden;
   }
 }
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -242,12 +200,12 @@ body .button .commandButton {
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes priceAnimation {
+@keyframes spinReverse {
   from {
-    right: 5%;
+    transform: rotate(360deg);
   }
   to {
-    right: 20%;
+    transform: rotate(0deg);
   }
 }
 @keyframes priceAnimation {
@@ -258,31 +216,12 @@ body .button .commandButton {
     right: 20%;
   }
 }
-@-webkit-keyframes priceAnimationReverted {
-  from {
-    right: 20%;
-  }
-  to {
-    right: 5%;
-  }
-}
 @keyframes priceAnimationReverted {
   from {
     right: 20%;
   }
   to {
     right: 5%;
-  }
-}
-@-webkit-keyframes reduceSizeMeal {
-  from {
-    width: 100%;
-  }
-  to {
-    width: 50%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 @keyframes reduceSizeMeal {
@@ -296,16 +235,6 @@ body .button .commandButton {
     text-overflow: ellipsis;
   }
 }
-@-webkit-keyframes cascade {
-  0% {
-    padding-top: 20px;
-    opacity: 0;
-  }
-  100% {
-    padding-top: 10px;
-    opacity: 1;
-  }
-}
 @keyframes cascade {
   0% {
     padding-top: 20px;
@@ -317,29 +246,21 @@ body .button .commandButton {
   }
 }
 .menuMeal div:nth-child(1n) {
-  -webkit-animation: cascade 2s forwards;
-          animation: cascade 2s forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation: cascade 2s forwards;
+  animation-delay: 1s;
 }
 
 .menuMeal div:nth-child(2n) {
-  -webkit-animation: cascade 2s forwards;
-          animation: cascade 2s forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation: cascade 2s forwards;
+  animation-delay: 2s;
 }
 
 .menuMeal div:nth-child(3n) {
-  -webkit-animation: cascade 2s forwards;
-          animation: cascade 2s forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation: cascade 2s forwards;
+  animation-delay: 3s;
 }
 
 .menuMeal div:nth-child(4n) {
-  -webkit-animation: cascade 2s forwards;
-          animation: cascade 2s forwards;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
+  animation: cascade 2s forwards;
+  animation-delay: 4s;
 }/*# sourceMappingURL=styleMenu.css.map */

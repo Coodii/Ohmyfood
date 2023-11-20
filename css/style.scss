@@ -12,11 +12,11 @@
     font-style: normal;
    }
 
-h1{
+h1,h2{
     font-family: Shrikhand;
 }
 
-h2, h3, p{
+h3, p{
     font-family: Roboto;
 }
 
@@ -32,7 +32,17 @@ header{
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: relative;
+
+    .return_button{
+        color: black;
+        position: absolute;
+        left: 20px;
+        top: 30px;
+    }
+    
 }
+
 
 .localisation{
     background-color: lightgray;
@@ -197,6 +207,10 @@ header{
                         position: absolute;
                         right: 10px;
                         top: 20px;
+                        display: flex;
+                        justify-content: center;
+                        box-sizing: border-box;
+                        padding-top: 5px;
                     }
                 }
             

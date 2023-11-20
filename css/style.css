@@ -10,11 +10,11 @@
   font-weight: normal;
   font-style: normal;
 }
-h1 {
+h1, h2 {
   font-family: Shrikhand;
 }
 
-h2, h3, p {
+h3, p {
   font-family: Roboto;
 }
 
@@ -26,6 +26,13 @@ header {
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
+}
+header .return_button {
+  color: black;
+  position: absolute;
+  left: 20px;
+  top: 30px;
 }
 
 .localisation {
@@ -167,6 +174,10 @@ header {
   position: absolute;
   right: 10px;
   top: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 5px;
 }
 .restaurants .card .cardRestaurant .heart {
   color: gray;
@@ -182,8 +193,7 @@ header {
   right: 30px;
 }
 .restaurants .card .cardRestaurant .heartPurple:hover {
-  -webkit-animation: heartOpacity 0.5s forwards;
-          animation: heartOpacity 0.5s forwards;
+  animation: heartOpacity 0.5s forwards;
 }
 
 footer {
@@ -214,15 +224,6 @@ footer .footerUl .footerLi {
 footer .footerUl .footerLi .footerI {
   padding-top: 15px;
   padding-right: 10px;
-}
-
-@-webkit-keyframes heartOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
 }
 
 @keyframes heartOpacity {

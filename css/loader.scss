@@ -4,20 +4,23 @@ header, section, footer{
 }
 
 .loader{
-    display: flex;
-    justify-content: center;
     animation: loaderAnimation 3s forwards;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 
 
     .loading {
-        display: block;
+      position: absolute;
         border: 12px solid #f3f3f3; /* Light grey */
         border-top: 12px solid black; /* Blue */
         border-radius: 50%;
         width: 50px;
         height: 50px;
         animation: spin 3s linear forwards;
-      }
+        top: 45vh;
+        left: 43vw;
+    }
 }
 
 
@@ -32,21 +35,18 @@ header, section, footer{
 }
 
 @keyframes loaderAnimation{
-    0% {width: auto; height: auto;
-      padding-top: 30%;}
+    0% {width: auto; height: auto;}
     99%{
         width: auto; height: auto;
-        padding-top: 30%;
     }
     100% {
         width: 0; height: 0;}
 }
 
 @keyframes opacityAnimation {
-    0% {visibility: hidden;}
+    0% {display: none;}
     99%{
-        visibility: hidden;
+        display: none;
     }
-    100% {
-      visibility: visible}
+    100% {}
 }

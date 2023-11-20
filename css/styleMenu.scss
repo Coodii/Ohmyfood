@@ -89,7 +89,7 @@ body{
                     position: absolute;
                     right: 5%;
                     bottom: 15%;
-                    animation: priceAnimationReverted 1.5s forwards;
+                    animation: priceAnimationReverted 1s forwards;
                 }
 
                 .animationMeal{
@@ -103,11 +103,11 @@ body{
                     align-items: center;
                     display: flex;
                     visibility: hidden;
-                    animation: removeMenu 1.5s forwards;
+                    animation: removeMenu 1s forwards;
 
                     .check{
                         color: white;
-                        animation: spin 1.5 reverse ;
+                        animation: spinReverse 1s reverse ;
                     }
                 }
             }
@@ -115,22 +115,22 @@ body{
 
             .mealCard:hover {
                 .mealName{
-                    animation: reduceSizeMeal 3s forwards;
+                    animation: reduceSizeMeal 1s forwards;
                 }
 
                 .mealDescription{
-                    animation: reduceSizeMeal 3s forwards;
+                    animation: reduceSizeMeal 1s forwards;
                 }
 
                 .price{
-                    animation: priceAnimation 3s forwards;
+                    animation: priceAnimation 1s forwards;
                 }
 
                 .animationMeal{
-                    animation: addMenu 3s forwards;
+                    animation: addMenu 1s forwards;
                     
                     .check{
-                        animation: spin 3s forwards ;
+                        animation: spin 1s forwards ;
                     }
                 }
             }
@@ -239,6 +239,15 @@ body{
     }
     to {
         transform:rotate(360deg);
+    }
+}
+
+@keyframes spinReverse {
+    from {
+        transform:rotate(360deg);
+    }
+    to {
+        transform:rotate(0deg);
     }
 }
 
