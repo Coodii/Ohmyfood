@@ -1,0 +1,52 @@
+
+header, section, footer{
+  animation:opacityAnimation 3s forwards;
+}
+
+.loader{
+    animation: loaderAnimation 3s forwards;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+
+    .loading {
+      position: absolute;
+        border: 12px solid #f3f3f3; /* Light grey */
+        border-top: 12px solid black; /* Blue */
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 3s linear forwards;
+        top: 45vh;
+        left: 43vw;
+    }
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg);}
+  99%{
+    opacity: 99;
+  }
+  100% {
+    transform: rotate(1080deg);
+    opacity: 0;}
+}
+
+@keyframes loaderAnimation{
+    0% {width: auto; height: auto;}
+    99%{
+        width: auto; height: auto;
+    }
+    100% {
+        width: 0; height: 0;}
+}
+
+@keyframes opacityAnimation {
+    0% {display: none;}
+    99%{
+        display: none;
+    }
+    100% {}
+}

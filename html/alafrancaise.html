@@ -6,95 +6,130 @@
         <link rel="stylesheet" type="text/css" href="../css/normalize.css">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/styleMenu.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
 		<link href="css/fontawesome-all.css" rel="stylesheet">
 		<title>Ohmyfood</title>
 	</head>
 
 	<body>
 		<header>
+            <a class="return_button" href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
 			<h1>ohmyfood</h1>
 		</header>
-		<img class= "imgRestaurantMenu" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="card4"/>
+        <div class = "image">
+            <img class= "imgRestaurantMenu" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a_la_francaise">
+        </div>
         <article class = "menu">
             <div class = "menuTitle">
-                <h1>A la francaise</h1>
-                <div class = "heart"><i class="fas fa-heart"></i></div>
+                <h2>A la francaise</h2>
+                <div class = "hearts">
+                    <div class = "heart"><i class="fa-regular fa-heart"></i></div>
+                    <div class = "heartPurple"><i class="fa-solid fa-heart"></i></div>
+                </div>
             </div>
-            <section class = "entrees">
-                <div class = "mealType">
-                    <h3>ENTRÉES</h3>
-                    <div class = "borderLine"></div>
-                </div>
-                <div class = "menuMeal">
-                    <div class = "mealCard">
-                        <p class = "mealName">Tartare de poulpe acidulé</p>
-                        <p class = "mealDescription">Aux zests d'orange</p>
-                        <p class = "price">25€</p>
+            <div class = 'menuAlignement'>
+                <section class = "entrees">
+                    <div class = "mealType">
+                        <h3>ENTRÉES</h3>
+                        <div class = "borderLine"></div>
                     </div>
-                    <div class = "mealCard">
-                        <p class = "mealName">Velouté de légumes d'antan</p>
-                        <p class = "mealDescription">Carotte, panais, topinambour</p>
-                        <p class = "price">35€</p>
+                    <div class = "menuMeal">
+                        <div class = "mealCard">
+                            <p class = "mealName">Tartare de poulpe acidulé</p>
+                            <p class = "mealDescription">Aux zests d'orange</p>
+                            <p class = "price">25€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
+                        <div class = "mealCard">
+                            <p class = "mealName">Velouté de légumes d'antan</p>
+                            <p class = "mealDescription">Carotte, panais, topinambour</p>
+                            <p class = "price">35€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
+                        <div class = "mealCard">
+                            <p class = "mealName">Soupe à l'oignon</p>
+                            <p class = "mealDescription">Revisitée</p>
+                            <p class = "price">20€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class = "mealCard">
-                        <p class = "mealName">Soupe à l'oignon</p>
-                        <p class = "mealDescription">Revisitée</p>
-                        <p class = "price">20€</p>
+                </section>
+                <section class = "plats">
+                    <div class = "mealType">
+                        <h3>PLATS</h3>
+                        <div class = "borderLine"></div>
                     </div>
-                </div>
-            </section>
-            <section class = "plats">
-                <div class = "mealType">
-                    <h3>PLATS</h3>
-                    <div class = "borderLine"></div>
-                </div>
-                <div class = "menuMeal">
-                    <div class = "mealCard">
-                        <p class = "mealName">Coquilles Saint-Jacques</p>
-                        <p class = "mealDescription">Accompagnée d'une purée de panais</p>
-                        <p class = "price">40€</p>
+                    <div class = "menuMeal">
+                        <div class = "mealCard">
+                            <p class = "mealName">Coquilles Saint-Jacques</p>
+                            <p class = "mealDescription">Accompagnée d'une purée de panais</p>
+                            <p class = "price">40€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
+                        <div class = "mealCard">
+                            <p class = "mealName">Magret de canard</p>
+                            <p class = "mealDescription">Et parmentier de pommes de terres</p>
+                            <p class = "price">35€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
+                        <div class = "mealCard">
+                            <p class = "mealName">Pigeonneau d'Ille-et-Vilaine</p>
+                            <p class = "mealDescription">Sur son lit de gnocchis aux légumes</p>
+                            <p class = "price">44€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class = "mealCard">
-                        <p class = "mealName">Magret de canard</p>
-                        <p class = "mealDescription">Et parmentier de pommes de terres</p>
-                        <p class = "price">35€</p>
+                </section>
+                <section class = "desserts">
+                    <div class = "mealType">
+                        <h3>DESSERTS</h3>
+                        <div class = "borderLine"></div>
                     </div>
-                    <div class = "mealCard">
-                        <p class = "mealName">Pigeonneau d'Ille-et-Vilaine</p>
-                        <p class = "mealDescription">Sur son lit de gnocchis aux légumes</p>
-                        <p class = "price">44€</p>
+                    <div class = "menuMeal">
+                        <div class = "mealCard">
+                            <p class = "mealName">Pétales de violettes glacés</p>
+                            <p class = "mealDescription">Et purée de noisettes</p>
+                            <p class = "price">18€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
+                        <div class = "mealCard">
+                            <p class = "mealName">Fondant au chocolat</p>
+                            <p class = "mealDescription">Revisité</p>
+                            <p class = "price">22€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
+                        <div class = "mealCard">
+                            <p class = "mealName">Millefeuille croustillant</p>
+                            <p class = "mealDescription">Myrtilles et pates d'amande</p>
+                            <p class = "price">23€</p>
+                            <div class = "animationMeal">
+                                <div class ="check"><i class="fa-solid fa-circle-check"></i></div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class = "desserts">
-                <div class = "mealType">
-                    <h3>DESSERTS</h3>
-                    <div class = "borderLine"></div>
-                </div>
-                <div class = "menuMeal">
-                    <div class = "mealCard">
-                        <p class = "mealName">Pétales de violettes glacés</p>
-                        <p class = "mealDescription">Et purée de noisettes</p>
-                        <p class = "price">18€</p>
-                    </div>
-                    <div class = "mealCard">
-                        <p class = "mealName">Fondant au chocolat</p>
-                        <p class = "mealDescription">Revisité</p>
-                        <p class = "price">22€</p>
-                    </div>
-                    <div class = "mealCard">
-                        <p class = "mealName">Millefeuille croustillant</p>
-                        <p class = "mealDescription">Myrtilles et pates d'amande</p>
-                        <p class = "price">23€</p>
-                    </div>
-                </div>
-                <div class = 'button'><button class = "commandButton">Commander</button></div>
-            </section>
+                </section>
+            </div>
+            <div class = 'button'><button class = "commandButton">Commander</button></div>
             
         </article>
 		<footer>
-			<p class = "footerP">ohmyfood<p/>
+			<p class = "footerP">ohmyfood</p>
 			<ul class="footerUl">
 				<li class = "footerLi">
 						<i class="fa-solid fa-utensils footerI"></i>

@@ -5,12 +5,13 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../css/normalize.css">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link href="css/fontawesome-all.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/loader.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link href="css/fontawesome-all.css" type="text/css" rel="stylesheet">
 		<title>Ohmyfood</title>
 	</head>
-
 	<body>
+		<div class = "loader"><div class="loading"></div></div>
 		<header>
 			<h1>ohmyfood</h1>
 			<div class="localisation">
@@ -52,36 +53,48 @@
 		<section class="restaurants">
 			<h2>Restaurants</h2>
 			<div class = "card">
-				<a class = "cardRestaurant" href="lapalettedugout.html">
-					<img class= "imgRestaurant" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="card4"/>
-					<p class = "restaurantName">La palette du gout</p>
-					<p class="restaurantPlace">Ménilmontant</p>
-					<button class="new">Nouveau</button>
-					<div class = "heart"><i class="far fa-heart"></i></div>
-				</a>
-				<a class = "cardRestaurant" href="lanoteenchantee.html">
-					<img class= "imgRestaurant" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="card4"/>
-					<p class = "restaurantName">La note enchantée</p>
-					<p class="restaurantPlace">Charonne</p>
-					<button class="new">Nouveau</button>
-					<div class = "heart"><i class="far fa-heart"></i></div>
-				</a>
-				<a class = "cardRestaurant" href="alafrancaise.html">
-					<img class= "imgRestaurant" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="card4"/>
-					<p class = "restaurantName">A la francaise</p>
-					<p class="restaurantPlace">Cité Rouge</p>
-					<div class = "heart"><i class="far fa-heart"></i></div>
-				</a>
-				<a class = "cardRestaurant" href="ledelicedessens.html">
-					<img class= "imgRestaurant" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="card4"/>
-					<p class = "restaurantName">Le délice des sens</p>
-					<p class="restaurantPlace">Folie-Méricourt</p>
-					<div class = "heart"><i class="far fa-heart"></i></div>
-				</a>
+				<div class = "cardRestaurant" >
+					<a class = "link" href="lapalettedugout.html">
+						<img class= "imgRestaurant" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la_palette_du_gout">
+						<p class = "restaurantName">La palette du gout</p>
+						<p class="restaurantPlace">Ménilmontant</p>
+						<div class="new">Nouveau</div>
+					</a>
+					<div class = "heart"><i class="fa-regular fa-heart"></i></div>
+					<div class = "heartPurple"><i class="fa-solid fa-heart"></i></div>
+				</div>
+				<div class = "cardRestaurant">
+					<a class = "link" href="lanoteenchantee.html">
+						<img class= "imgRestaurant" src="../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la_note_enchante">
+						<p class = "restaurantName">La note enchantée</p>
+						<p class="restaurantPlace">Charonne</p>
+						<div class="new">Nouveau</div>
+					</a>
+					<div class = "heart"><i class="fa-regular fa-heart"></i></div>
+					<div class = "heartPurple"><i class="fa-solid fa-heart"></i></div>
+				</div>
+				<div class = "cardRestaurant">
+					<a class = "link" href="alafrancaise.html">
+						<img class= "imgRestaurant" src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a_la_francaise">
+						<p class = "restaurantName">A la francaise</p>
+						<p class="restaurantPlace">Cité Rouge</p>
+					</a>
+					<div class = "heart"><i class="fa-regular fa-heart"></i></div>
+					<div class = "heartPurple"><i class="fa-solid fa-heart"></i></div>
+				</div>
+				<div class = "cardRestaurant">
+					<a class = "link" href="ledelicedessens.html">
+						<img class= "imgRestaurant" src="../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="le_delice_de_sens">
+						<p class = "restaurantName">Le délice des sens</p>
+						<p class="restaurantPlace">Folie-Méricourt</p>
+					</a>
+					<div class = "heart"><i class="fa-regular fa-heart"></i></div>
+					<div class = "heartPurple"><i class="fa-solid fa-heart"></i></div>
+				</div>
 			</div>
 		</section>
 		<footer>
-			<p class = "footerP">ohmyfood<p/>
+			<p class = "footerP">ohmyfood</p>
 			<ul class="footerUl">
 				<li class = "footerLi">
 						<i class="fa-solid fa-utensils footerI"></i>

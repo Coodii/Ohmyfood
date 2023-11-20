@@ -18,9 +18,24 @@ body .menu .menuTitle {
   flex-direction: row;
   justify-content: space-around;
 }
-body .menu .menuTitle .heart {
-  padding-top: 30px;
+body .menu .menuTitle .hearts {
+  position: relative;
+}
+body .menu .menuTitle .hearts .heart {
   color: gray;
+  position: absolute;
+  top: 30px;
+  right: 5px;
+}
+body .menu .menuTitle .hearts .heartPurple {
+  opacity: 0;
+  position: absolute;
+  color: #9356DC;
+  top: 30px;
+  right: 5px;
+}
+body .menu .menuTitle .hearts .heartPurple:hover {
+  animation: heartOpacity 0.5s forwards;
 }
 body .menu .mealType {
   position: relative;
@@ -42,6 +57,7 @@ body .menu .menuMeal .mealCard {
   border-radius: 15px;
   position: relative;
   background-color: white;
+  opacity: 0;
 }
 body .menu .menuMeal .mealCard .mealName {
   margin: 0;
@@ -57,8 +73,41 @@ body .menu .menuMeal .mealCard .mealDescription {
 }
 body .menu .menuMeal .mealCard .price {
   position: absolute;
-  right: 10px;
-  top: 20px;
+  right: 5%;
+  bottom: 15%;
+  animation: priceAnimationReverted 1s forwards;
+}
+body .menu .menuMeal .mealCard .animationMeal {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 15px 15px 0px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  visibility: hidden;
+  animation: removeMenu 1s forwards;
+}
+body .menu .menuMeal .mealCard .animationMeal .check {
+  color: white;
+  animation: spinReverse 1s reverse;
+}
+body .menu .menuMeal .mealCard:hover .mealName {
+  animation: reduceSizeMeal 1s forwards;
+}
+body .menu .menuMeal .mealCard:hover .mealDescription {
+  animation: reduceSizeMeal 1s forwards;
+}
+body .menu .menuMeal .mealCard:hover .price {
+  animation: priceAnimation 1s forwards;
+}
+body .menu .menuMeal .mealCard:hover .animationMeal {
+  animation: addMenu 1s forwards;
+}
+body .menu .menuMeal .mealCard:hover .animationMeal .check {
+  animation: spin 1s forwards;
 }
 body .button {
   margin: 40px 0px 40px 0;
@@ -73,4 +122,145 @@ body .button .commandButton {
   font-size: 20px;
   border: 0px;
   color: white;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: white;
+    height: 100%;
+    position: relative;
+  }
+  body .image {
+    display: flex;
+    height: 400px;
+  }
+  body .image .imgRestaurantMenu {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .menu .menuAlignement {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  body .menu .menuAlignement .entrees {
+    width: 33%;
+  }
+  body .menu .menuAlignement .plats {
+    width: 33%;
+  }
+  body .menu .menuAlignement .desserts {
+    width: 33%;
+  }
+  body .menu .menuAlignement .menuMeal .mealCard .mealName {
+    font-size: 20px;
+  }
+  body .menu .menuAlignement .menuMeal .mealCard .mealDescription {
+    font-size: 17px;
+  }
+  body .menu .menuAlignement .menuMeal .mealCard .price {
+    font-size: 20px;
+  }
+  body .button {
+    padding-top: 50px;
+  }
+}
+@keyframes addMenu {
+  from {
+    background-color: #99E2D0;
+    width: 0px;
+    visibility: hidden;
+  }
+  to {
+    background-color: #99E2D0;
+    width: 15%;
+    height: 100%;
+    visibility: visible;
+  }
+}
+@keyframes removeMenu {
+  from {
+    background-color: #99E2D0;
+    width: 15%;
+    height: 100%;
+    visibility: visible;
+  }
+  to {
+    background-color: #99E2D0;
+    width: 0px;
+    visibility: hidden;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes priceAnimation {
+  from {
+    right: 5%;
+  }
+  to {
+    right: 20%;
+  }
+}
+@keyframes priceAnimationReverted {
+  from {
+    right: 20%;
+  }
+  to {
+    right: 5%;
+  }
+}
+@keyframes reduceSizeMeal {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@keyframes cascade {
+  0% {
+    padding-top: 20px;
+    opacity: 0;
+  }
+  100% {
+    padding-top: 10px;
+    opacity: 1;
+  }
+}
+.menuMeal div:nth-child(1n) {
+  animation: cascade 2s forwards;
+  animation-delay: 1s;
+}
+
+.menuMeal div:nth-child(2n) {
+  animation: cascade 2s forwards;
+  animation-delay: 2s;
+}
+
+.menuMeal div:nth-child(3n) {
+  animation: cascade 2s forwards;
+  animation-delay: 3s;
+}
+
+.menuMeal div:nth-child(4n) {
+  animation: cascade 2s forwards;
+  animation-delay: 4s;
 }/*# sourceMappingURL=styleMenu.css.map */

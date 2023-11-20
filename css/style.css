@@ -10,11 +10,11 @@
   font-weight: normal;
   font-style: normal;
 }
-h1 {
+h1, h2 {
   font-family: Shrikhand;
 }
 
-h2, h3, p {
+h3, p {
   font-family: Roboto;
 }
 
@@ -26,6 +26,13 @@ header {
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: relative;
+}
+header .return_button {
+  color: black;
+  position: absolute;
+  left: 20px;
+  top: 30px;
 }
 
 .localisation {
@@ -68,8 +75,7 @@ header {
 .fonctionnement .steps {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding: 0px 0px 50px 20px;
+  padding: 0px 30px 50px 30px;
 }
 .fonctionnement .steps .stepCard {
   display: flex;
@@ -126,8 +132,6 @@ header {
   flex-direction: column;
 }
 .restaurants .card .cardRestaurant {
-  color: inherit;
-  text-decoration: none;
   border-radius: 20px;
   background-color: white;
   box-shadow: 0px 0px 2px 1px #ccc;
@@ -136,7 +140,11 @@ header {
   margin-bottom: 20px;
   position: relative;
 }
-.restaurants .card .cardRestaurant .imgRestaurant {
+.restaurants .card .cardRestaurant .link {
+  color: inherit;
+  text-decoration: none;
+}
+.restaurants .card .cardRestaurant .link .imgRestaurant {
   width: 100%;
   border-radius: 20px 20px 0px 0px;
   -o-object-fit: cover;
@@ -144,16 +152,16 @@ header {
   height: 70%;
   padding: 0;
 }
-.restaurants .card .cardRestaurant .restaurantName {
+.restaurants .card .cardRestaurant .link .restaurantName {
   font-weight: bold;
   margin: 0;
   padding: 10px 0px 0px 10px;
 }
-.restaurants .card .cardRestaurant .restaurantPlace {
+.restaurants .card .cardRestaurant .link .restaurantPlace {
   margin: 0;
   padding: 10px 0px 0px 10px;
 }
-.restaurants .card .cardRestaurant .new {
+.restaurants .card .cardRestaurant .link .new {
   background-color: #99E2D0;
   border: 0;
   border-radius: 2px;
@@ -166,12 +174,26 @@ header {
   position: absolute;
   right: 10px;
   top: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 5px;
 }
 .restaurants .card .cardRestaurant .heart {
   color: gray;
   position: absolute;
   bottom: 30px;
   right: 30px;
+}
+.restaurants .card .cardRestaurant .heartPurple {
+  opacity: 0;
+  color: #9356DC;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.restaurants .card .cardRestaurant .heartPurple:hover {
+  animation: heartOpacity 0.5s forwards;
 }
 
 footer {
@@ -202,4 +224,13 @@ footer .footerUl .footerLi {
 footer .footerUl .footerLi .footerI {
   padding-top: 15px;
   padding-right: 10px;
+}
+
+@keyframes heartOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
 }/*# sourceMappingURL=style.css.map */
